@@ -9,13 +9,13 @@ public class Example {
     public static void main(String[] args) {
 
         // 姓名：张三、身高：180、生日在 1950 年 5 月内
-        DateTime may1995 = DateTime.parse("1950-05");
-        DateTime june1995 = may1995.plusMonths(1);
+        DateTime may1950 = DateTime.parse("1950-05");
+        DateTime june1950 = may1950.plusMonths(1);
         UserQuery qo = UserQueryBuilder.create()
                 .nameIs("张三")
                 .heightIs(180)
-                .birthdayAfter(may1995.toDate())
-                .birthdayBefore(june1995.toDate())
+                .birthdayAfter(may1950.toDate())
+                .birthdayBefore(june1950.toDate())
                 .build();
 
         // 姓名：未知、身高：未知
